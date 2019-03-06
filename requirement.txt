@@ -1,0 +1,3 @@
+discord==0.16.12
+discord.py==0.16.12
+git+https://github.com/texnofobix/pyrcon.git#python3
