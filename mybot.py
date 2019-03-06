@@ -58,14 +58,14 @@ async def status():
     await bot.say('``` {} ```'.format(conn.send('status')))
 
 @bot.command()
-@commands.has_role(name='server lord') #[,
+@commands.has_role(name=config['DEFAULT']['DISCORD_ROLE']) #[,
 async def changemap(mapname: str):
     """ Changes map if given role: server-lord """
     conn.changemap(mapname)
     await bot.say('requested map change to: {}'.format(mapname))
 
 @bot.command()
-@commands.has_role(name='server lord') #[,
+@commands.has_role(name=config['DEFAULT']['DISCORD_ROLE']) #[,
 async def rawcommand(*, arg : str):
     """ Issues a raw command if given role: server-lord """
     await bot.say('Sending "{}"'.format(arg))
